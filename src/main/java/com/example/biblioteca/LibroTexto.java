@@ -1,0 +1,17 @@
+package com.example.biblioteca;
+
+public class LibroTexto extends Libro {
+
+    private String curso;
+
+    public LibroTexto(String titulo, String autor, int numeroEjemplares,
+                      int numeroPrestados, String curso) {
+
+        super(titulo, autor, numeroEjemplares, numeroPrestados);
+        this.curso = curso;
+    }
+
+    public String toString() {
+        return super.toString() + "Curso:" + curso;
+    }
+}
