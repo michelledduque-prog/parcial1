@@ -34,19 +34,19 @@ class LibroTexto {
     +toString(): String
 }
 
-class LibroTextoUNIAC {
-    -facultad: String
-    +LibroTextoUNIAC(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int, curso: String, facultad: String)
-    +toString(): String
-}
-
 class Novela {
     -tipo: String
     +Novela(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int, tipo: String)
     +toString(): String
 }
 
+class LibroTextoUNIAC {
+    -facultad: String
+    +LibroTextoUNIAC(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int, curso: String, facultad: String)
+    +toString(): String
+}
+
 LibroTexto --|> Libro
-LibroTextoUNIAC --|> LibroTexto
 Novela --|> Libro
+LibroTextoUNIAC --|> LibroTexto
     
