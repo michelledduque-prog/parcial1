@@ -6,33 +6,49 @@ Proyecto desarrollado en Java usando Maven.
 
 ```mermaid
 classDiagram
+    %% Paquete bibloptecah
+    package bibloptecah {
+        class Libro {
+            -titulo: String
+            -autor: String
+            -numeroEjemplares: int
+            -numeroPrestados: int
+            +Libro()
+            +Libro(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int)
+            +getTitulo(): String
+            +setTitulo(titulo: String): void
+            +getAutor(): String
+            +setAutor(autor: String): void
+            +getNumeroEjemplares(): int
+            +setNumeroEjemplares(numeroEjemplares: int): void
+            +getNumeroPrestados(): int
+            +setNumeroPrestados(numeroPrestados: int): void
+            +prestamo(): boolean
+            +devolucion(): boolean
+            +toString(): String
+        }
 
-class Libro{
--titulo : String
--autor : String
--numeroEjemplares : int
--numeroPrestados : int
-+prestamo() boolean
-+devolucion() boolean
-}
+        class LibroTexto {
+            -curso: String
+            +LibroTexto(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int, curso: String)
+            +toString(): String
+        }
 
-class LibroTexto{
--curso : String
-}
+        class LibroTextoUNIAC {
+            -facultad: String
+            +LibroTextoUNIAC(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int, curso: String, facultad: String)
+            +toString(): String
+        }
 
-class LibroTextoUNIAC{
--facultad : String
-}
+        class Novela {
+            -tipo: String
+            +Novela(titulo: String, autor: String, numeroEjemplares: int, numeroPrestados: int, tipo: String)
+            +toString(): String
+        }
 
-class Novela{
--tipo : String
-}
-
-class Main{
-+main()
-}
-
-Libro <|-- LibroTexto
-LibroTexto <|-- LibroTextoUNIAC
-Libro <|-- Novela
-```
+        %% Relaciones de herencia
+        LibroTexto --|> Libro
+        LibroTextoUNIAC --|> LibroTexto
+        Novela --|> Libro
+    }
+    
