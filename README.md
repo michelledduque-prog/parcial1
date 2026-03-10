@@ -1,8 +1,4 @@
-﻿# Sistema de Biblioteca
-
-Proyecto desarrollado en Java usando Maven.
-
-## Diagrama UML
+# Diagrama de Clases
 
 ```mermaid
 classDiagram
@@ -49,4 +45,4 @@ class LibroTextoUNIAC {
 LibroTexto --|> Libro
 Novela --|> Libro
 LibroTextoUNIAC --|> LibroTexto
-```
+    
